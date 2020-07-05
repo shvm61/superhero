@@ -13,8 +13,8 @@ function render() {
   console.log("inside render ");
   console.log(fvrts);
 
+  card_container.innerHTML = "";
   for (let i = 0; i < fvrts.length; i++) {
-    card_container.innerHTML = "";
     async function heroById() {
       let response = await fetch(`${url}/${fvrts[i]}`);
       let item = await response.json();
