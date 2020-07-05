@@ -1,0 +1,8 @@
+.float-right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.modal-dialog {
+  width: 800px;
+}
