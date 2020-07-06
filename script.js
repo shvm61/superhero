@@ -3,8 +3,9 @@
   const search_bar = document.querySelector(".form-control");
   const card_container = document.querySelector(".card-container");
   const modal = document.querySelector(".modal-body");
+  const header = document.querySelector("header");
   //   const more = document.querySelector(".more");
-  // console.log(btn);
+  // console.log(header);
 
   search_bar.addEventListener("keyup", showSearch);
   document.addEventListener("click", eventDecider);
@@ -14,6 +15,11 @@
   }
   function showSearch() {
     let search_value = search_bar.value;
+    if (search_value) {
+      header.style.display = "none";
+      console.log("headerrrr");
+    } else header.style.display = "block";
+
     //   console.log(search_value);
     let items;
     async function fetch_cards() {
